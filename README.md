@@ -1,137 +1,115 @@
-# 📊 Mutual Fund Overview & Insights
+# 📊 Mutual Fund Analysis – Top 30 High-Return, Low-Risk Schemes
 
-This mutual fund analysis project focuses on identifying top 30 schemes with high return and low risk using Python, Excel, and Power BI.
-
-🛠️ **Tools Used:** Python (Pandas, Sklearn), Excel, Power BI  
-📁 **Dataset:** More Than 2500 Mutual Fund Schemes (Top 30 Filtered)
+This project aims to identify the **top 30 mutual fund schemes** offering **maximum returns with minimum risk** by leveraging Python, Excel, and Power BI.
 
 ---
 
-## 🧠 Project Goal
+## 🛠️ Tools & Technologies
 
-To identify **top-performing, low-risk mutual fund schemes** using data-driven techniques and present insights through a dynamic, professional Power BI dashboard.
+- **Python** (Pandas, Scikit-learn): Data wrangling, analysis, scoring  
+- **Excel**: Data formatting, validation  
+- **Power BI**: Interactive visualization
+
+📁 **Dataset Size**: 2500+ mutual fund schemes  
+✅ **Final Output**: Top 30 best-performing, low-risk mutual funds
 
 ---
 
-## 🐍 Python-Based Fund Analysis
+## 🎯 Project Objective
 
-I started by importing and exploring a dataset of over 2500 mutual fund schemes.  
-🔗 [Mutual_Funds.csv](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual_Funds.csv)  
-🔗 [Python Script](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/commit/851d5bb1928e3c85b1f22495efb141ed287bf943)
+To help investors make informed decisions by finding mutual funds with:
+- Strong long-term returns  
+- Low expense ratios  
+- Stable performance  
+- Moderate risk levels  
 
-### 1. Data Cleaning
-- Removed unnecessary columns
+All insights are delivered via an **interactive Power BI dashboard**.
+
+---
+
+## 🐍 Python-Based Analysis
+
+### 📂 Dataset:  
+[Mutual_Funds.csv](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual_Funds.csv)
+
+### ✅ Key Steps:
+
+#### 1. Data Cleaning
+- Removed irrelevant fields
 - Handled missing values
-- Standardized numeric formats (returns, expense ratios)
+- Standardized return percentages and expenses
 
-### 2. Data Description & Understanding
-- Statistical summaries using Pandas: mean, median, mode, min, max, std deviation
-- Analyzed fund distributions across return rates, risk levels, and fund age
+#### 2. Descriptive Stats
+- Analyzed distribution of returns, AUM, risk levels, fund age
 
-### 3. Data Normalization
-- Used `MinMaxScaler` from `sklearn.preprocessing` to normalize numeric fields
-- Compared returns and expense ratios on a common scale
+#### 3. Normalization
+- Applied `MinMaxScaler` to normalize numeric fields for scoring
 
-### 4. Fund Scoring & Ranking
-Custom scoring formula based on:
-- High 3-Year Returns  
-- Low Expense Ratio  
-- Moderate Fund Age  
-- Consistent 1-Year Return > 0
+#### 4. Scoring & Ranking
+Calculated custom scores based on:
+- 3-Year Return (higher = better)
+- Expense Ratio (lower = better)
+- Fund Age (moderate = better)
+- Positive 1-Year Return
 
-### 5. Final Output – Top 30 Funds
-Extracted the **Top 30 Mutual Funds** with best return-low risk balance  
-🔗 [Top 30 Mutual Funds (Excel)](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/top_30_mutual_funds.xlsx)
+#### 5. Final Output
+Extracted and saved the top 30 mutual fund schemes  
+📄 [Download Top 30 Funds (Excel)](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/top_30_mutual_funds.xlsx)
 
 ---
 
-## 📈 Power BI Dashboard – Mutual Fund Insights
+## 📈 Power BI Dashboard
 
-After processing the data using Python and Excel, I built an **interactive dashboard** in Power BI.  
-🔗 [Power BI Dashboard File (.pbix)](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual%20Fund%20Dashboard.pbix)  
-🔗 [Dashboard Preview Image](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual%20Fund%20Dashboard%20.png)
+After filtering the data in Python and Excel, insights were visualized using Power BI.  
+🔗 [Download PBIX File](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual%20Fund%20Dashboard.pbix)  
+🖼️ [Dashboard Preview](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual%20Fund%20Dashboard%20.png)
 
-### 📌 Key Features
+### 🔍 Dashboard Features:
 
-#### 📅 Dynamic Filters
-- Filter by Fund Type, Category, Sub-category, AMC Name, Risk Level, Fund Rating
+#### 🎛️ Filters:
+- Fund Type, AMC, Risk, Sub-category, Fund Rating
 
-#### 📊 Key Visuals & KPIs
-- 💼 **Total Investment by Fund Type:** AUM across Equity, Debt, Hybrid, etc.  
-- 🔁 **SIP vs Lumpsum Summary Cards:** Monthly SIP trends and minimum lump sum amounts  
-- 🧾 **Expense Ratio Comparison:** By Investment Strategy and Sub-Category  
-- 📈 **3-Year Returns (Donut Chart):** Category-wise long-term returns  
-- 🏆 **Top Performing AMCs:** Average return and AUM  
-- 👤 **Fund Manager AUM Comparison:** Largest fund managers by assets  
-- 🧠 **Insight Cards:** Auto-generated insights with simple explanations
-
----
-
-## 🔍 Mutual Fund Investment Insights
-
-| Insight Category | Summary |
-|------------------|---------|
-| 💼 **Investment Trends** | Equity Funds lead with ₹1.35M Cr total size |
-| 👤 **Fund Manager** | Vivek Sharma manages highest AUM: ₹7.3M Cr |
-| 📉 **Cost vs Return** | Index Funds have lowest expense ratio: 0.26% |
-| 🏦 **Best Return (1Y)** | Bank of India Mutual Fund: 14.4% |
-| 🔄 **SIP vs Lumpsum** | Avg. SIP: ₹528.50/month, Lumpsum Min: ₹3.05K |
-| ⏳ **3-Year Returns** | Equity Funds: 37.84%, Hybrid: 14.25% |
+#### 📊 Visuals:
+- AUM distribution by fund type  
+- SIP vs Lumpsum analysis  
+- Expense Ratio comparison  
+- Top-performing AMCs & fund managers  
+- Donut charts for 3-year returns  
+- Auto-generated insight cards
 
 ---
 
-## 🖼️ Dashboard Preview
+## 🔍 Investment Insights (Based on Dashboard)
 
-![Mutual Fund Dashboard Preview](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual%20Fund%20Dashboard%20.png)
-
----
-
-### 🧠 Final Conclusion – See the Power of Investment
-
-Through this project and dashboard, you can clearly see the **power of investing in mutual funds** when guided by data-driven insights.
-
-By analyzing returns, expense ratios, risk levels, and fund manager performance, I’ve shown how even basic financial knowledge, supported by visual tools, can help improve financial decisions.
-
-💡 This dashboard isn't just about numbers—it's about empowering people to make **smarter, low-risk investments** and take control of their financial future.
-Early and informed mutual fund investment leads to **long-term wealth creation**.  
-By combining:
-- Python for filtering,
-- Excel for cleaning,
-- Power BI for storytelling,
-
-I created a tool that helps both beginners and experts make **data-driven, low-risk, high-reward decisions**.
+| Category | Insight |
+|----------|---------|
+| 💼 Equity Fund AUM | ₹1.35M Cr – Highest among all fund types |
+| 👤 Fund Manager | Vivek Sharma manages ₹7.3M Cr AUM |
+| 💸 Lowest Expense Ratio | Index Funds – Avg. 0.26% |
+| 🏦 Best 1-Year Return | Bank of India MF – 14.4% |
+| 🔄 SIP Trends | Avg. ₹528.50/month |
+| 📈 Long-Term Return | Equity – 37.84%, Hybrid – 14.25% |
 
 ---
 
-## 🔧 Tool Summary
+## 🧠 Final Thoughts
 
-| Tool   | Purpose |
-|--------|---------|
-| Python | Data cleaning, scoring, filtering top 30 funds |
-| Excel  | Formatting, validation, supporting data |
-| Power BI | Interactive dashboard and visual storytelling |
+This project demonstrates how combining **Python, Excel, and Power BI** enables data-driven investment decisions.  
+It simplifies mutual fund selection based on return, cost, and performance consistency.
 
----
-
-## 📁 Files in This Repository
-
-| File | Description |
-|------|-------------|
-| [Mutual_Funds.csv](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual_Funds.csv) | Main dataset |
-| [top_30_mutual_funds.xlsx](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/top_30_mutual_funds.xlsx) | Final top 30 filtered mutual funds |
-| [Mutual Fund Dashboard.pbix](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual%20Fund%20Dashboard.pbix) | Power BI dashboard |
-| [Mutual Fund Dashboard.png](https://github.com/niravtrivedi23/Mutual-Fund-Analysis/blob/main/Mutual%20Fund%20Dashboard%20.png) | Dashboard image preview |
+💡 **Invest smart, invest early – with the power of data.**
 
 ---
 
-✅ **Feel free to fork, explore, and contribute!**
+## 🧰 Tool Summary
 
-### 🙌 Feedback Welcome
+| Tool     | Purpose |
+|----------|---------|
+| Python   | Data processing, scoring, ranking |
+| Excel    | Formatting and validation |
+| Power BI | Visualization and storytelling |
 
-Thank you for exploring my Mutual Fund Analysis project!  
-I’m always open to suggestions, improvements, or collaboration ideas.
+---
 
-📩 Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/trivedi-nirav-a1760424b)  
-📧 Or drop an email: **niravtrivedi069@gmail.com**
 
-Your feedback helps me grow and build better data-driven solutions. Let’s connect and discuss ideas!
+
